@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class = "container">
+  <app-cockpit (serverCreated)="onServerAdded($event)"
+                (blueprintCreated) = "onServerBlueprintAdded($event)" >
+  </app-cockpit>
+  <hr>
+  <div class="row">
+    <div class = "col-xs-12">
+     <app-server-element *ngFor = "let serverElement of serverElements"
+                          [element] = "serverElement"></app-server-element>
+    </div>
+  </div>
+  <hr>
+   <app-clack (clickCalck)= "onClickCalckButton($event)"
+              (clickClean) = "onClickClean($event)"
+              [number]= "result"></app-clack>
+  <hr>
+  <app-calcarr></app-calcarr>
+  <hr>
+  <div *appUnless ="!visible">This is the content when *appUnless="true" </div>
+  <hr>
+   <p appTextHighlight>This is our appHighlight directive</p>
+  <hr>
+   <p appBasicHightlight [defaultBgColor]= "silver"> this is BasicHiligthText directive</p>
+</div>

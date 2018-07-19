@@ -1,0 +1,13 @@
+.result{
+    background-color:rgb(116, 226, 230); /*for compatibility with older browsers*/
+    background-image: linear-gradient(rgb(116, 226, 230), rgb(175, 170, 170));
+    text-align: center;
+    font-size: 1em;
+}
+.calcku{
+    background-color: rgb(82, 78, 78);
+    padding: 10px;
+    border: 5px ridge grey;
+    border-radius: 10%;
+    margin: 20px;
+}

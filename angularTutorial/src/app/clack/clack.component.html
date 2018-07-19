@@ -1,0 +1,39 @@
+<div class = "row">
+  <div class= "col-xs-12 calck">
+    <!-- <h1>Calculator</h1> -->
+    <div class = "card result">
+      <div class = "card-header"> Calculator Result: </div>
+        <div class = "card-body">
+          <p> 
+            <strong *ngIf = "number % 2 === 0; else odd" style = "color: blue" >{{number}}</strong>
+            <ng-template #odd>
+              <strong  style="color:red">{{number}}</strong>
+            </ng-template>
+          </p>
+      </div>
+    </div>
+    <div class = "form-detail">
+    <label>First number:</label>
+    <input type = "text"
+           class = "form-control"
+           [(ngModel)] ="firstNum">
+    <form>
+      <input type="radio" name="operator" value="+"  [(ngModel)] ="operatorChoose" > + <br>
+      <input type="radio" name="operator" value="-"  [(ngModel)] ="operatorChoose" > - <br>
+      <input type="radio" name="operator" value="*" [(ngModel)] ="operatorChoose" > * <br>
+      <input type="radio" name="operator" value="/" [(ngModel)] ="operatorChoose" > / <br>
+      <input type="radio" name="operator" value="%" [(ngModel)] ="operatorChoose" > % <br>
+    </form>
+
+    <label>Second number:</label>       
+    <input type = "text"
+           class="form-control"
+           [(ngModel)] = "secondNum">
+           
+    <button class = "btn btn-primary"
+            (click)="onButtonClack(clackInput)"> Calc </button>
+    <button class = "btn btn-primary"
+            (click)= "onClearButton(clackInput)">Clean</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+input, input:focus{
+    background-color:rgb(43, 41, 41); /*for compatibility with older browsers*/
+	background-image: linear-gradient(rgb(105, 102, 102), rgb(175, 170, 170));
+    color:white;
+}
+.result{
+    background-color:rgb(116, 226, 230); /*for compatibility with older browsers*/
+    background-image: linear-gradient(rgb(116, 226, 230), rgb(175, 170, 170));
+    text-align: center;
+    font-size: 1em;
+}
